@@ -11,10 +11,22 @@ use Rack::Session::Pool, :expire_after => 60
 # set :public, Proc.new {File.join(root, '..', "public")}
 
 get '/' do
-	session[:player_count] = 0
 	erb :index
+end
+
+post '/login' do
+	unless params[:name].empty?
+		redirect '/battlefield'		
+	else
+    	@message = "We don't accept unknown human into the battlefield!"
+    	erb :index
+  	end
 end
 
 get '/battlefield' do
 	erb :battlefield
+end
+
+get '/login' do
+  redirect '/'
 end

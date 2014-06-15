@@ -4,11 +4,14 @@
 	<h1>BATTLESHIP WORLD CUP 2014</h1>
 <br />
 <br />
-
+    <% if @message %>
+      <strong><%= @message %></strong>
+    <% end %>
+<br />
 	You are about to enter the battlefield.
 <br />
 	When you're ready, enter your name and click submit to begin:
-    	<form method='get' action='/battlefield'>
-	   		<input type='text' name='name' placeholder='Player 1'>
+    	<form method='post' action='/login'>
+	   		<input type='text' name='name' placeholder='enter your name'>
 	   		<button>submit</button>
     	</form>
