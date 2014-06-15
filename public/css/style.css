@@ -1,0 +1,10 @@
+.inline {
+    display: inline-block;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+table.inline td {
+    background-color: salmon;
+    margin: 6px 6px 6px 6px;
+    padding: 6px 6px 6px 6px;
+}
