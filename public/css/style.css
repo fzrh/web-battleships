@@ -1,10 +1,56 @@
-.inline {
-    display: inline-block;
-    border-collapse: separate;
-    border-spacing: 5px;
+/* Styling for 3-column layout */
+
+body {
+	background-color: #fff;
+	text-align: center;
+	font-family: arial;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
 }
-table.inline td {
-    background-color: salmon;
-    margin: 6px 6px 6px 6px;
-    padding: 6px 6px 6px 6px;
-}
+
+#wrapper { 
+	width: 980px; 
+	background: silver; 
+	margin: 0 auto; 
+}   
+
+#header { 
+	background: red; 
+	color: white; 
+}   
+
+#column-left { 
+	width: 250px; 
+	float: left; 
+	background: orange; 
+}   
+
+#column-center { 
+	width: 365px; 
+	float: left; 
+	background: yellow; 
+}   
+
+#column-right { 
+	width: 365px; 
+	float: left; 
+	background: green; 
+} 
+
+#footer { 
+	clear: both; 
+	background: blue;
+} 
+
+/* Styling for primary and tracking board */
+	.inline {
+	    display: inline-block;
+	    border-collapse: separate;
+	    border-spacing: 5px;
+	}
+	table.inline td {
+	    background-color: salmon;
+	    margin: 6px 6px 6px 6px;
+	    padding: 6px 6px 6px 6px;
+	}
