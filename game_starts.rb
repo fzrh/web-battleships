@@ -1,0 +1,6 @@
+require 'sinatra'
+require_relative 'app/main'
+require_relative 'lib/ship'
+require_relative 'lib/ships'
+require_relative 'lib/coordinate'
+require_relative 'lib/coordinates'
