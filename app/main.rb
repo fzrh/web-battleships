@@ -7,6 +7,8 @@ require_relative '../lib/coordinates'
 # set :views, Proc.new {File.join(root, '..', "views")}
 # set :public, Proc.new {File.join(root, '..', "public")}
 
+use Rack::Session::Pool, :expire_after => 60
+
 enable :sessions
 
 get '/' do
