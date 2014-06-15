@@ -17,15 +17,15 @@ end
 post '/login' do
 	session[:player_name]= params[:name]
 	unless session[:player_name].empty?
-		redirect '/battlefield'		
+		redirect '/battlebase'		
 	else
     	@message = "We don't accept unknown human into the battlefield!"
     	erb :index
   	end
 end
 
-get '/battlefield' do
-	erb :battlefield
+get '/battlebase' do
+	erb :battlebase
 end
 
 get '/login' do
