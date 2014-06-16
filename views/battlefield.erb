@@ -1,324 +1,144 @@
-<div id="wrapper"> 
+<div id="boardgame">
+        <canvas id = "canvas0"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvas0)"></canvas>
+        <canvas id = "canvas1"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvas1)"></canvas>
+        <canvas id = "canvas2"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvas2)"></canvas>
+        <canvas id = "canvas3"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvas3)"></canvas>
+        <canvas id = "canvas4"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvas4)"></canvas>
+        <canvas id = "canvas5"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvas5)"></canvas>
+        <canvas id = "canvas6"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvas6)"></canvas>
+        <canvas id = "canvas7"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvas7)"></canvas>        
+        <canvas id = "canvas8"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvas8)"></canvas>
+        <canvas id = "canvas9"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvas9)"></canvas>
+        <canvas id = "canvas10"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvas10)"></canvas>
+        <br />
 
-    <div id="header">
-    The Battlefield
-    </div>  
+        <canvas id = "canvasA"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasA)"></canvas>
+        <canvas id = "canvasA1"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasA1)"></canvas>
+        <canvas id = "canvasA2"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasA2)"></canvas>
+        <canvas id = "canvasA3"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasA3)"></canvas>
+        <canvas id = "canvasA4"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasA4)"></canvas>
+        <canvas id = "canvasA5"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasA5)"></canvas>
+        <canvas id = "canvasA6"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasA6)"></canvas>
+        <canvas id = "canvasA7"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasA7)"></canvas>
+        <canvas id = "canvasA8"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasA8)"></canvas>      
+        <canvas id = "canvasA9"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasA9)"></canvas>
+        <canvas id = "canvasA10"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasA10)"></canvas>
+        <br />
 
-    <div id="column-left">
-    Welcome <%= session[:player_name] %>!
-    <br />
-    <br /> 
-    Game Instructions:
-    </div>  
+        <canvas id = "canvasB"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasB2)"></canvas>       
+        <canvas id = "canvasB1"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasB1)"></canvas>
+        <canvas id = "canvasB2"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasB2)"></canvas>
+        <canvas id = "canvasB3"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasB3)"></canvas>
+        <canvas id = "canvasB4"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasB4)"></canvas>
+        <canvas id = "canvasB5"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasB5)"></canvas>
+        <canvas id = "canvasB6"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasB6)"></canvas>
+        <canvas id = "canvasB7"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasB7)"></canvas>
+        <canvas id = "canvasB8"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasB8)"></canvas>      
+        <canvas id = "canvasB9"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasB9)"></canvas>
+        <canvas id = "canvasB10"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasB10)"></canvas>
+        <br />
 
-    <div id="column-center">
-                <table border=1 class="inline">
-                    <thead>
-                        <th colspan="11">Primary Board</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td> </td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>                  
-                        </tr>
-                        <tr>
-                            <td>A</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>B</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>C</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>               
-                        <tr>
-                            <td>D</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>               
-                        <tr>
-                            <td>E</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>F</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>               
-                        <tr>
-                            <td>G</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>               
-                        <tr>
-                            <td>H</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>               
-                        <tr>
-                            <td>I</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>               
-                        <tr>
-                            <td>J</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>                               
-                    </tbody>
-                </table>
-    </div>   
+        <canvas id = "canvasC"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasC)"></canvas>
+        <canvas id = "canvasC1"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasC1)"></canvas>
+        <canvas id = "canvasC2"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasC2)"></canvas>
+        <canvas id = "canvasC3"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasC3)"></canvas>
+        <canvas id = "canvasC4"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasC4)"></canvas>
+        <canvas id = "canvasC5"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasC5)"></canvas>
+        <canvas id = "canvasC6"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasC6)"></canvas>
+        <canvas id = "canvasC7"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasC7)"></canvas>
+        <canvas id = "canvasC8"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasC8)"></canvas>      
+        <canvas id = "canvasC9"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasC9)"></canvas>
+        <canvas id = "canvasC10"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(canvasC10)"></canvas>
+        <br />
 
-    <div id="column-right">
-                <table border=1 class="inline">
-                    <thead>
-                        <th colspan="11">Tracking Board</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td> </td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>                  
-                        </tr>
-                        <tr>
-                            <td>A</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>B</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>C</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>               
-                        <tr>
-                            <td>D</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>               
-                        <tr>
-                            <td>E</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>F</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>               
-                        <tr>
-                            <td>G</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>               
-                        <tr>
-                            <td>H</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>               
-                        <tr>
-                            <td>I</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>               
-                        <tr>
-                            <td>J</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td> 
-                        </tr>               
-                    </tbody>
-                </table>
-    </div>   
+        <canvas id = "canvasD"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(2)"></canvas>          
+        <canvas id = "canvas31"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(31)"></canvas>
+        <canvas id = "canvas32"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(32)"></canvas>
+        <canvas id = "canvas33"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(33)"></canvas>
+        <canvas id = "canvas34"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(34)"></canvas>
+        <canvas id = "canvas35"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(35)"></canvas>
+        <canvas id = "canvas36"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(36)"></canvas>
+        <canvas id = "canvas37"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(37)"></canvas>
+        <canvas id = "canvas38"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(38)"></canvas>            
+        <canvas id = "canvas39"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(39)"></canvas>
+        <canvas id = "canvas40"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(40)"></canvas>
+        <br />
 
-    <div id="footer">
-    Battlefield © 2014
-    </div> 
+        <canvas id = "canvasE"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(2)"></canvas>
+        <canvas id = "canvas41"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(41)"></canvas>
+        <canvas id = "canvas42"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(42)"></canvas>
+        <canvas id = "canvas43"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(43)"></canvas>
+        <canvas id = "canvas44"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(44)"></canvas>
+        <canvas id = "canvas45"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(45)"></canvas>
+        <canvas id = "canvas46"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(46)"></canvas>
+        <canvas id = "canvas47"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(47)"></canvas>
+        <canvas id = "canvas48"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(48)"></canvas>            
+        <canvas id = "canvas49"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(49)"></canvas>
+        <canvas id = "canvas50"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(50)"></canvas>
+        <br />
 
-</div> 
+        <canvas id = "canvasF"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(2)"></canvas>
+        <canvas id = "canvas51"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(51)"></canvas>
+        <canvas id = "canvas52"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(52)"></canvas>
+        <canvas id = "canvas53"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(53)"></canvas>
+        <canvas id = "canvas54"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(54)"></canvas>
+        <canvas id = "canvas55"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(55)"></canvas>
+        <canvas id = "canvas56"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(56)"></canvas>
+        <canvas id = "canvas57"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(57)"></canvas>
+        <canvas id = "canvas58"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(58)"></canvas>            
+        <canvas id = "canvas59"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(59)"></canvas>
+        <canvas id = "canvas60"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(60)"></canvas>
+        <br />
+
+        <canvas id = "canvasG"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(2)"></canvas>
+        <canvas id = "canvas61"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(61)"></canvas>
+        <canvas id = "canvas62"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(62)"></canvas>
+        <canvas id = "canvas63"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(63)"></canvas>
+        <canvas id = "canvas64"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(64)"></canvas>
+        <canvas id = "canvas65"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(65)"></canvas>
+        <canvas id = "canvas66"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(66)"></canvas>
+        <canvas id = "canvas67"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(67)"></canvas>
+        <canvas id = "canvas68"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(68)"></canvas>            
+        <canvas id = "canvas69"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(69)"></canvas>
+        <canvas id = "canvas70"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(70)"></canvas>
+        <br />
+
+        <canvas id = "canvasH"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(2)"></canvas>
+        <canvas id = "canvas71"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(71)"></canvas>
+        <canvas id = "canvas72"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(72)"></canvas>
+        <canvas id = "canvas73"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(73)"></canvas>
+        <canvas id = "canvas74"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(74)"></canvas>
+        <canvas id = "canvas75"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(75)"></canvas>
+        <canvas id = "canvas76"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(76)"></canvas>
+        <canvas id = "canvas77"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(77)"></canvas>
+        <canvas id = "canvas78"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(78)"></canvas>            
+        <canvas id = "canvas79"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(78)"></canvas>
+        <canvas id = "canvas80"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(79)"></canvas>
+        <br />
+
+        <canvas id = "canvasI"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(2)"></canvas>
+        <canvas id = "canvas81"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(81)"></canvas>
+        <canvas id = "canvas82"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(82)"></canvas>
+        <canvas id = "canvas83"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(83)"></canvas>
+        <canvas id = "canvas84"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(84)"></canvas>
+        <canvas id = "canvas85"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(85)"></canvas>
+        <canvas id = "canvas86"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(86)"></canvas>
+        <canvas id = "canvas87"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(87)"></canvas>
+        <canvas id = "canvas88"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(88)"></canvas>            
+        <canvas id = "canvas89"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(89)"></canvas>
+        <canvas id = "canvas90"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(90)"></canvas>
+        <br />
+
+        <canvas id = "canvasJ"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(2)"></canvas>
+        <canvas id = "canvas91"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(91)"></canvas>
+        <canvas id = "canvas92"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(92)"></canvas>
+        <canvas id = "canvas93"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(93)"></canvas>
+        <canvas id = "canvas94"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(94)"></canvas>
+        <canvas id = "canvas95"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(95)"></canvas>
+        <canvas id = "canvas96"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(96)"></canvas>
+        <canvas id = "canvas97"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(97)"></canvas>
+        <canvas id = "canvas98"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(98)"></canvas>            
+        <canvas id = "canvas99"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(99)"></canvas>
+        <canvas id = "canvas100"  width="50" height="50" style="border:1px solid black" onclick="canvasClicked(100)"></canvas>
+        <br />
+</div>

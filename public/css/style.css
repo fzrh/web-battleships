@@ -21,36 +21,63 @@ body {
 }   
 
 #column-left { 
-	width: 250px; 
+	width: 270px; 
 	float: left; 
 	background: orange; 
+	text-align: justify;
 }   
 
 #column-center { 
-	width: 365px; 
+	width: 355px; 
 	float: left; 
 	background: yellow; 
 }   
 
 #column-right { 
-	width: 365px; 
+	width: 355px; 
 	float: left; 
 	background: green; 
 } 
 
 #footer { 
 	clear: both; 
-	background: blue;
+	background: purple;
 } 
 
-/* Styling for primary and tracking board */
-	.inline {
-	    display: inline-block;
-	    border-collapse: separate;
-	    border-spacing: 5px;
+/* Battlebase styling */
+	.gameboard {
+    float: left;
+    width: 30px;
+    height: 297px;
+    border: 1px solid blue;
+    overflow: hidden;
+}
+
+	.row {
+    width: 30px;
+    height: 25px;
+    border: 1px solid blue;
 	}
-	table.inline td {
-	    background-color: salmon;
-	    margin: 6px 6px 6px 6px;
-	    padding: 6px 6px 6px 6px;
-	}
+/* Battlefield styling */
+
+h1 {
+    position:relative;   
+}
+
+h2 {
+    position:relative;  
+}
+
+h3 {
+    position:relative; 
+}
+
+#boardgame { 
+	clear: both; 
+	background: #fff;
+} 
+
+canvas {
+    position:relative;
+    background-color: salmon;  
+}
